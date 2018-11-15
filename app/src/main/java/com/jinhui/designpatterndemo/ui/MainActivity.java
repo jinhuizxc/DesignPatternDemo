@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.jinhui.designpatterndemo.R;
 import com.jinhui.designpatterndemo.singleton.SingletonActivity;
+import com.jinhui.designpatterndemo.state.StateActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
     }
 
     @OnClick({R.id.bt_observer, R.id.bt_factory, R.id.bt_singleton, R.id.bt_strategy, R.id.bt_adapter, R.id.bt_command, R.id.bt_decorator, R.id.bt_facade, R.id.bt_template_method, R.id.bt_state})
@@ -74,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bt_template_method:
                 break;
             case R.id.bt_state:
+                // 状态模式
+                startActivity(new Intent(this, StateActivity.class));
                 break;
         }
     }
