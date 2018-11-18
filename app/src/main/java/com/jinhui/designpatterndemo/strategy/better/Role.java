@@ -14,36 +14,49 @@ public abstract class Role {
 
     protected String name;
 
+    private IDisplayBehavior iDisplayBehavior;
+    private IDefendBehavior iDefendBehavior;
+    private IRunBehavior iRunBehavior;
+    private IAttackBehavior iAttackBehavior;
 
-    public Role setiDisplayBehavior(DisplayYZ displayYZ) {
+    public Role setiDisplayBehavior(IDisplayBehavior iDisplayBehavior) {
+        this.iDisplayBehavior = iDisplayBehavior;
         return this;
     }
 
-    public Role setiAttackBehavior(AttackXL attackXL) {
+    public Role setiAttackBehavior(IAttackBehavior iAttackBehavior) {
+        this.iAttackBehavior = iAttackBehavior;
         return this;
     }
 
-    public Role setiDefendBehavior(DefendTMS defendTMS) {
+    public Role setiDefendBehavior(IDefendBehavior iDefendBehavior) {
+        this.iDefendBehavior = iDefendBehavior;
         return this;
     }
 
-    public Role setiRunBehavior(RunJCTQ runJCTQ) {
+
+    public Role setiRunBehavior(IRunBehavior iRunBehavior) {
+        this.iRunBehavior = iRunBehavior;
         return this;
     }
+
+
 
     public void display() {
-
+        iDisplayBehavior.display();
     }
 
     public void attack() {
-
+        iAttackBehavior.attack();
     }
 
     public void run() {
-
+        iRunBehavior.run();
     }
 
     public void defend() {
-
+        iDefendBehavior.defend();
     }
+
+
 }
