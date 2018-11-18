@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.jinhui.designpatterndemo.R;
+import com.jinhui.designpatterndemo.factory.FactoryActivity;
+import com.jinhui.designpatterndemo.observer.ObserverActivity;
 import com.jinhui.designpatterndemo.singleton.SingletonActivity;
 import com.jinhui.designpatterndemo.state.StateActivity;
+import com.jinhui.designpatterndemo.templatemethod.TemplateMethodActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -55,9 +58,11 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.bt_observer, R.id.bt_factory, R.id.bt_singleton, R.id.bt_strategy, R.id.bt_adapter, R.id.bt_command, R.id.bt_decorator, R.id.bt_facade, R.id.bt_template_method, R.id.bt_state})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_observer:
+            case R.id.bt_observer:  // 观察者模式
+                startActivity(new Intent(this, ObserverActivity.class));
                 break;
-            case R.id.bt_factory:
+            case R.id.bt_factory:  // 工厂模式
+                startActivity(new Intent(this, FactoryActivity.class));
                 break;
             case R.id.bt_singleton:
                 //  单例设计模式
@@ -73,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.bt_facade:
                 break;
-            case R.id.bt_template_method:
+            case R.id.bt_template_method: // 模板方法模式
+                startActivity(new Intent(this, TemplateMethodActivity.class));
                 break;
-            case R.id.bt_state:
-                // 状态模式
+            case R.id.bt_state:// 状态模式
                 startActivity(new Intent(this, StateActivity.class));
                 break;
         }
