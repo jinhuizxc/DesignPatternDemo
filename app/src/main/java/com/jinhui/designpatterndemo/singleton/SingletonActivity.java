@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.jinhui.designpatterndemo.R;
 import com.jinhui.designpatterndemo.singleton.ehan.SingletonEHan;
+import com.jinhui.designpatterndemo.singleton.enums.SingletonEnum;
+import com.jinhui.designpatterndemo.singleton.inclass.SingletonIn;
+import com.jinhui.designpatterndemo.singleton.lanhan.SingletonLanHan;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,20 +47,18 @@ public class SingletonActivity extends AppCompatActivity {
     @OnClick({R.id.bt_ehan, R.id.bt_lanhan, R.id.bt_inclass, R.id.bt_enum})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_ehan:
-                // 饿汉式[可用]
+            case R.id.bt_ehan: // 饿汉式[可用]
 //                SingletonEHan singletonEHan = SingletonEHan.getInstance();
                 SingletonEHan singletonEHan = SingletonEHan.getSingletonEHan();
                 break;
-            case R.id.bt_lanhan:
-                // 懒汉式[双重校验锁 推荐用]
-
+            case R.id.bt_lanhan: // 懒汉式[双重校验锁 推荐用]
+                SingletonLanHan singletonLanHanFour = SingletonLanHan.getSingletonLanHanFour();
                 break;
-            case R.id.bt_inclass:
-                //内部类[推荐用]
+            case R.id.bt_inclass: //内部类[推荐用]
+                SingletonIn singletonIn = SingletonIn.getSingletonIn();
                 break;
-            case R.id.bt_enum:
-                // 枚举[推荐用]
+            case R.id.bt_enum: // 枚举[推荐用]
+                SingletonEnum.instance.whateverMethod();
                 break;
 
         }

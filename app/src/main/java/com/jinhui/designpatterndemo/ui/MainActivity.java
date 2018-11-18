@@ -12,6 +12,7 @@ import com.jinhui.designpatterndemo.factory.FactoryActivity;
 import com.jinhui.designpatterndemo.observer.ObserverActivity;
 import com.jinhui.designpatterndemo.singleton.SingletonActivity;
 import com.jinhui.designpatterndemo.state.StateActivity;
+import com.jinhui.designpatterndemo.strategy.StrategyActivity;
 import com.jinhui.designpatterndemo.templatemethod.TemplateMethodActivity;
 
 import butterknife.BindView;
@@ -64,19 +65,19 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bt_factory:  // 工厂模式
                 startActivity(new Intent(this, FactoryActivity.class));
                 break;
-            case R.id.bt_singleton:
-                //  单例设计模式
+            case R.id.bt_singleton: //  单例设计模式
                 startActivity(new Intent(this, SingletonActivity.class));
                 break;
-            case R.id.bt_strategy:
+            case R.id.bt_strategy: // 策略模式
+                startActivity(new Intent(this, StrategyActivity.class));
                 break;
-            case R.id.bt_adapter:
+            case R.id.bt_adapter: // 适配器模式
                 break;
-            case R.id.bt_command:
+            case R.id.bt_command: // 命令模式
                 break;
-            case R.id.bt_decorator:
+            case R.id.bt_decorator: // 装饰者模式
                 break;
-            case R.id.bt_facade:
+            case R.id.bt_facade: // 外观模式
                 break;
             case R.id.bt_template_method: // 模板方法模式
                 startActivity(new Intent(this, TemplateMethodActivity.class));
