@@ -44,18 +44,30 @@ public class TemplateMethodActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_template_method);
         ButterKnife.bind(this);
-
+        setTitle("模板方法模式");
         tvDefine.setText(EMTagHandler.fromHtml(AppConstant.TEMPLATEMETHOD_DEFINE));
     }
 
-    @OnClick({R.id.bt_template_method, R.id.bt_template_method_text, R.id.bt_template_method_text2})
+    @OnClick({R.id.bt_template_method_text, R.id.bt_template_method_text2})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.bt_template_method:
-                break;
             case R.id.bt_template_method_text: // 查看所有人员的工作情况
+                ITWorker itWorker = new ITWorker("景彬");
+                itWorker.workOneDay();
+                HRWorker hrWorker = new HRWorker("莉莉姐");
+                hrWorker.workOneDay();
+                QAWorker qaWorker = new QAWorker("张元元");
+                qaWorker.workOneDay();
+                QAWorker qaWorker1 = new QAWorker("徐晨星");
+                qaWorker1.workOneDay();
+                CTOWorker ctoWorker = new CTOWorker("远哥");
+                ctoWorker.workOneDay();
+                OtherWorker otherWorker = new OtherWorker("那个谁,就是你");
+                otherWorker.workOneDay();
                 break;
             case R.id.bt_template_method_text2: // 查看程序猿离开公司的时间
+                ITWorker itWorker2 = new ITWorker("景彬");
+                itWorker2.workOneDay();
                 break;
         }
     }
