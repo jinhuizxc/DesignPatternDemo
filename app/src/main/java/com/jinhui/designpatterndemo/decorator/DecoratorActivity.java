@@ -51,6 +51,8 @@ public class DecoratorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_decorator);
         ButterKnife.bind(this);
 
+        setTitle("装饰者模式");
+
         tvDefine.setText(EMTagHandler.fromHtml(AppConstant.DECORATOR_DEFINE));
 
     }

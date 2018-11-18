@@ -43,7 +43,7 @@ public class StrategyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_strategy);
         ButterKnife.bind(this);
-
+        setTitle("策略模式");
         tvDefine.setText(EMTagHandler.fromHtml(AppConstant.STRATEGY_DEFINE));
     }
 

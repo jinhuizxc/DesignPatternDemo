@@ -42,6 +42,8 @@ public class SingletonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singleton);
         ButterKnife.bind(this);
+
+        setTitle("单例设计模式");
     }
 
     @OnClick({R.id.bt_ehan, R.id.bt_lanhan, R.id.bt_inclass, R.id.bt_enum})
