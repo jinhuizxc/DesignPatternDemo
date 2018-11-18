@@ -47,7 +47,9 @@
             android:name=".adapter.AdapterActivity"
             android:screenOrientation="portrait" />
 
-
+        <activity
+            android:name=".command.CommandActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

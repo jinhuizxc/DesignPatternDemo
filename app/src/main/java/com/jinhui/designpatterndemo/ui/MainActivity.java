@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.jinhui.designpatterndemo.R;
 import com.jinhui.designpatterndemo.adapter.AdapterActivity;
+import com.jinhui.designpatterndemo.command.CommandActivity;
 import com.jinhui.designpatterndemo.factory.FactoryActivity;
 import com.jinhui.designpatterndemo.observer.ObserverActivity;
 import com.jinhui.designpatterndemo.singleton.SingletonActivity;
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, AdapterActivity.class));
                 break;
             case R.id.bt_command: // 命令模式
+                startActivity(new Intent(this, CommandActivity.class));
                 break;
             case R.id.bt_decorator: // 装饰者模式
                 break;
