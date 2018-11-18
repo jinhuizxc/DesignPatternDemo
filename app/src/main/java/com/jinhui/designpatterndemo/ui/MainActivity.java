@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.jinhui.designpatterndemo.R;
+import com.jinhui.designpatterndemo.adapter.AdapterActivity;
 import com.jinhui.designpatterndemo.factory.FactoryActivity;
 import com.jinhui.designpatterndemo.observer.ObserverActivity;
 import com.jinhui.designpatterndemo.singleton.SingletonActivity;
@@ -24,6 +25,7 @@ import butterknife.OnClick;
  * Email: 1004260403@qq.com
  * <p>
  * 设计模式
+ * https://github.com/youlookwhat/DesignPattern
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, StrategyActivity.class));
                 break;
             case R.id.bt_adapter: // 适配器模式
+                startActivity(new Intent(this, AdapterActivity.class));
                 break;
             case R.id.bt_command: // 命令模式
                 break;
